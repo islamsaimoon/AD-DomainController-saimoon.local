@@ -1,0 +1,16 @@
+```mermaid
+sequenceDiagram
+  participant User as Domain User
+  participant Client as Client PC (CL1)
+  participant DC as Domain Controller (DC1)
+  participant DNS as DNS Service
+
+  User->>Client: Enter domain credentials
+  Client->>DNS: Resolve DC1.saimoon.local
+  DNS-->>Client: Returns DC1 IP
+  Client->>DC: Authenticate (Kerberos/NTLM)
+  DC-->>Client: Auth success + policy list
+  Client->>DC: Download GPOs (SYSVOL)
+  DC-->>Client: GPO files delivered
+  Client-->>User: Desktop loads with policies applied
+```

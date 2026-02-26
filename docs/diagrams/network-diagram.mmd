@@ -1,0 +1,10 @@
+```mermaid
+flowchart LR
+  Internet((Internet)) --> Router[Router/Gateway 192.168.10.1]
+  Router --> Switch[LAN Switch]
+
+  Switch --> DC1[DC1 - Windows Server 2022\nAD DS + DNS\nIP: 192.168.10.10]
+  Switch --> CL1[CL1 - Windows 10/11 Client\nDNS -> 192.168.10.10]
+
+  DC1 --> Zone[DNS Zone: saimoon.local]
+```
