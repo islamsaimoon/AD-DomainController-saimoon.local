@@ -45,7 +45,7 @@ The `scripts/` folder contains helper PowerShell scripts to speed up deployment 
 
 ## Author
 
-Saimoon\u00a0Islam
+Saimoon Islam
 
 ## Screenshots and Diagrams
 
