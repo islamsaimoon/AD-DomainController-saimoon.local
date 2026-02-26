@@ -1,18 +1,17 @@
 ```mermaid
 flowchart TB
-  Forest["Forest: saimoon.local"] --> Domain["Domain: saimoon.local"]
-  Domain --> DC["Domain Controller: DC1"]
 
-  Domain --> OUDept["OU: Departments"]
-  OUDept --> OUIT["OU: IT"]
-  OUDept --> OUHR["OU: HR"]
-  OUDept --> OUFIN["OU: Finance"]
+Forest["Forest: saimoon.local"] --> Domain["Domain: saimoon.local"]
+Domain --> DC["Domain Controller: DC1"]
 
-  OUIT --> GIT["Group: IT‑Admins"]
-  OUHR --> GHR["Group: HR‑Users"]
-  OUFIN --> GFIN["Group: Finance‑Users"]
+Domain --> OUDept["OU: Departments"]
+OUDept --> OUIT["OU: IT"]
+OUDept --> OUHR["OU: HR"]
+OUDept --> OUFIN["OU: Finance"]
 
-  OUIT --> UIT["User: it.user1"]
-  OUHR --> UHR["User: hr.user1"]
-  OUFIN --> UFIN["User: finance.user1"]
+OUIT --> GIT["Group: IT-Admins"]
+OUHR --> GHR["Group: HR-Users"]
+OUFIN --> GFIN["Group: Finance-Users"]
+
+OUIT --> UIT["User: it.user1"]
 ```
